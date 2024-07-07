@@ -1,0 +1,234 @@
+.logo {
+  height: 150px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  margin-top: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+  border-top-left-radius: 50px; /* Sudut membulat */
+  border-top-right-radius: 50px; /* Sudut membulat */
+  max-width: max; /* Lebar maksimum card */
+  height: 100%;
+}
+
+ion-segment-button {
+  font-size: 14px;
+  font-weight: 550;
+}
+
+ion-button {
+  font-size: 14px;
+  font-weight: 550;
+  margin-top: 10px;
+}
+
+.alert {
+  margin-right: 5px;
+}
+
+p {
+  cursor: pointer;
+}
+
+.ikon {
+  margin-right: 20px;
+}
+
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  margin-top: -15px;
+  margin-bottom: 10px;
+  // box-sizing: border-box;
+  font-size: small;
+  box-shadow: none;
+  justify-content: center;
+}
+ion-searchbar.custom-searchbar {
+  --background: #cccccca8;
+  --border-radius: 20px; /* Adjust this value to change the border radius */
+  --box-shadow: none;
+  --border: 1px solid #cccccc78; /* Optional: Add border */
+}
+
+ion-button.button-sc {
+  --border-width: 30px;
+}
+
+.horizontal-lines {
+  margin-top: 0%;
+  border-top: 1px solid #dcdcdc;
+  margin-bottom: -10px;
+}
+
+.list-container {
+  height: calc(100vh - 50px); /* Adjust as needed */
+  // overflow-y: auto; /* Enable vertical scrolling */
+}
+
+ion-list {
+  height: 61%; /* Make the list fill the card content */
+  overflow: auto; /* Make the list scrollable */
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.notdata {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // height: 100vh; /* Sesuaikan dengan kebutuhan Anda */
+  text-align: center;
+  flex-direction: column;
+  margin-top: 25%;
+}
+
+.toolbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
+.ikon {
+  font-size: 24px; /* Adjust icon size if needed */
+  position: absolute;
+  left: 0;
+}
+
+.toolbar-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 17px; /* Adjust font size if needed */
+  font-weight: 600;
+  margin: 0;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.teks {
+  margin-left: 20px;
+  margin-right: 28px;
+}
+
+.select-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.select-button ion-input {
+  width: 40px;
+  text-align: center;
+}
+
+.select-button ion-button {
+  margin: 0 5px;
+}
+
+.paket {
+  font-weight: 200;
+}
+
+.name {
+  font-weight: 600;
+}
+
+.profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.stats {
+  display: flex;
+  align-items: center;
+}
+.stats-container {
+  display: flex;
+  justify-content: space-between;
+}
+.stats-container p {
+  margin: 0 5px;
+}
+
+ion-title {
+  font-weight: bold;
+  font-size: 22px;
+  padding-left: 0px;
+}
+
+ion-icon {
+  margin-left: 5px;
+}
+
+.right-buttons {
+  justify-content: flex-end;
+}
+
+.card-color {
+  box-shadow: 20px #b5a8a8;
+}
+.color {
+  background-color: #2dd55b;
+}
+
+ion-modal {
+  --height: 50%;
+  --border-radius: 20px;
+}
+
+.modal-container {
+  padding: 16px;
+}
+
+.modal-header {
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 16px;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.button-container1 {
+  margin-top: 15px;
+}
+
+ion-select {
+  border: 1px solid #ccc;
+  border-radius: 23px;
+  padding: 1px;
+  padding-left: 50px;
+  margin-bottom: 11px;
+}
+
+ion-textarea {
+  border: 1px solid #ccc;
+  border-radius: 23px;
+  padding: 1px;
+  padding-left: 50px;
+  margin-bottom: 11px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  /* align-items: ; */
+  height: auto;
+  margin-top: 10px;
+}

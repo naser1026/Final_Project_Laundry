@@ -1,0 +1,176 @@
+.ion-input {
+  // --border-width: px; /* Menghilangkan border */
+  --highlight-height: 2px; /* Menghilangkan highlight saat input dipilih */
+}
+.custom-input {
+  --border-color: #ccc; /* Warna border */
+  --border-width: 1px; /* Lebar border */
+  --border-radius: 8px; /* Radius border */
+  --padding-start: 16px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  /* align-items: ; */
+  height: auto;
+}
+
+.pading-bottom {
+  padding-bottom: 3%;
+}
+.padding-space {
+  // padding-top: 1%;
+  // padding-bottom: 1%;
+  margin: 3%;
+}
+
+.element {
+  background-color: rgb(0, 255, 47); /* Hijau */
+  // color: rgb(0, 60, 255); /* Merah */
+}
+
+.font-color {
+  color: lightgray; /* Mengubah warna font menjadi merah */
+}
+
+.text-center-line {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.text-center-line::before,
+.text-center-line::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #b5a8a8;
+  // border-bottom: 1px solid #b5a8a8;
+}
+
+.text-center-line:not(:empty)::before {
+  margin-right: 0.25em;
+}
+
+.text-center-line:not(:empty)::after {
+  margin-left: 0.25em;
+}
+
+.body {
+  font-family: "bubblegun", sans-serif;
+}
+.logo {
+  height: 150px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  margin-top: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+  border-top-left-radius: 50px; /* Sudut membulat */
+  border-top-right-radius: 50px; /* Sudut membulat */
+  max-width: max; /* Lebar maksimum card */
+
+  height: 100%;
+}
+
+ion-segment-button {
+  font-size: 14px;
+  font-weight: 550;
+}
+
+ion-button {
+  font-size: 14px;
+  font-weight: 550;
+  margin-top: 10px;
+}
+
+.alert {
+  margin-right: 5px;
+}
+
+p {
+  cursor: pointer;
+}
+
+.ikon {
+  margin-right: 20px;
+}
+
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  margin-top: -15px;
+  margin-bottom: 10px;
+  // box-sizing: border-box;
+  font-size: small;
+  box-shadow: none;
+  justify-content: center;
+}
+ion-searchbar.custom-searchbar {
+  --background: #cccccca8;
+  --border-radius: 20px; /* Adjust this value to change the border radius */
+  --box-shadow: none;
+  --border: 1px solid #cccccc78; /* Optional: Add border */
+}
+
+ion-button.button-sc {
+  --border-width: 30px;
+}
+
+.horizontal-lines {
+  margin-top: 0%;
+  border-top: 1px solid #dcdcdc;
+  margin-bottom: -10px;
+}
+
+.list-container {
+  height: calc(100vh - 50px); /* Adjust as needed */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+ion-list {
+  height: 100%; /* Make the list fill the card content */
+  overflow: auto; /* Make the list scrollable */
+}
+h1 {
+  font-weight: 800;
+}
+
+.notdata {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 25%;
+}
+
+.toolbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
+.ikon {
+  font-size: 24px; /* Adjust icon size if needed */
+  position: absolute;
+  left: 0;
+}
+
+.toolbar-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.1rem !important; /* Adjust font size if needed */
+  margin: 0;
+}
+
+.spacer {
+  flex: 1;
+}

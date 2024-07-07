@@ -1,0 +1,65 @@
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+.horizontal-line {
+  border-top: 2px solid #000; /* Ubah warna dan ketebalan sesuai kebutuhan */
+  margin: 20px 0; /* Margin atas dan bawah */
+}
+// .bg-image{
+  // // //         // background-color: #f0f0f0; /* Warna latar belakang */
+  //         background-image: url('../assets/image/bg.jpg'); /* Gambar latar belakang */
+  //         background-repeat: no-repeat; /* Jangan ulangi gambar */
+  //         background-position: center; /* Posisi gambar di tengah */
+  //         background-size: contain; /* Sesuaikan gambar dengan ukuran layar */
+  // //         // height: 100vh; /* Sesuaikan dengan tinggi viewport */
+  //     }
+
+  .text-center-line {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.text-center-line::before,
+.text-center-line::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #000;
+}
+
+.text-center-line:not(:empty)::before {
+    margin-right: .25em;
+}
+
+.text-center-line:not(:empty)::after {
+    margin-left: .25em;
+}
+  
+    
+    

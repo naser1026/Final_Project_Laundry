@@ -1,0 +1,224 @@
+.ion-input {
+  // --border-width: px; /* Menghilangkan border */
+  --highlight-height: 2px; /* Menghilangkan highlight saat input dipilih */
+}
+.custom-input {
+  --border-color: #ccc; /* Warna border */
+  --border-width: 1px; /* Lebar border */
+  --border-radius: 8px; /* Radius border */
+  --padding-start: 16px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  /* align-items: ; */
+  height: auto;
+}
+
+.pading-bottom {
+  padding-bottom: 3%;
+}
+.padding-space {
+  // padding-top: 1%;
+  // padding-bottom: 1%;
+  margin: 3%;
+}
+
+.element {
+  background-color: rgb(0, 255, 47); /* Hijau */
+  // color: rgb(0, 60, 255); /* Merah */
+}
+
+.font-color {
+  color: lightgray; /* Mengubah warna font menjadi merah */
+}
+
+.ligo {
+  height: 150px;
+  width: 150px;
+  margin-left: 10px;
+  // justify-content: center;
+  // align-items: center;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.card1 {
+  // width: 100%;
+  // background: white; /* Warna latar belakang card */
+  // padding: 20px; /* Jarak dalam card */
+  margin-top: -32%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+  border-top-left-radius: 50px; /* Sudut membulat */
+  border-top-right-radius: 50px; /* Sudut membulat */
+  // max-width: max; /* Lebar maksimum card */
+  // width: 90%; /* Lebar penuh card dalam batas max-width */
+  // max-height: 900px;
+  height: 62%;
+  // align-items: flex-end;
+  // text-align: center; /* Teks di tengah */
+}
+ion-card.card2 {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+  border-top-left-radius: 50px; /* Sudut membulat */
+  border-top-right-radius: 50px; /* Sudut membulat */
+  height: 53%;
+  margin-top: 12%;
+  // text-align: center; /* Teks di tengah */
+
+  background: rgba(255, 255, 255, 0.02);
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 99%;
+  font-weight: 600;
+  // text-align: right;
+}
+
+.text-container {
+  flex: 1; /* Membuat elemen teks mengambil sisa ruang */
+  // text-align: center; /* Mengatur teks berada di tengah */
+}
+.text {
+  font-size: 18px; /* Sesuaikan dengan ukuran teks yang diinginkan */
+  font-weight: 600;
+}
+.contain {
+  display: flex;
+  align-items: center; /* Aligns items vertically in the center */
+}
+.custom-button {
+  width: 42px;
+  height: 42px;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column; /* Stacks the text vertically */
+  margin-left: 10px; /* Adds some space between the button and the text */
+}
+
+.text1 {
+  font-weight: 700;
+}
+.text2 {
+  font-style: italic;
+}
+
+ion-card-content {
+  height: 900px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.list-container {
+  margin-left: 15px;
+  height: calc(100vh - 200px); /* Adjust as needed */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+ion-list {
+  height: 53%; /* Make the list fill the card content */
+  overflow: auto; /* Make the list scrollable */
+}
+
+.main-card {
+  width: 400px;
+  // background-color: #fff;
+  border-radius: 8px;
+  // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: rgba(255, 255, 255, 0);
+  // height: 90%; /* Make the list fill the card content */
+  // overflow: auto; /* Make the list scrollable */
+  margin-bottom: 21%;
+}
+
+.inner-card {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.store-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.store-info img {
+  width: 30%;
+  height: 30%;
+  margin-left: 8px;
+}
+
+.store-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.store-details p {
+  margin: 0;
+  margin-right: 56px;
+  font-size: 99%;
+}
+
+.store-details h1 {
+  font-size: 150%;
+  margin: 0;
+}
+
+.cash-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+
+.cash-info .inner-card {
+  flex: 1;
+  flex-direction: column;
+}
+
+.cash-info p {
+  margin: 0;
+  font-size: 99%;
+}
+.card-on {
+  width: auto;
+  height: auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-bottom: -4%;
+}
+
+.main {
+  margin: 0;
+  padding: 0;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.903);
+}

@@ -1,0 +1,141 @@
+<ion-content [fullscreen]="true">
+  <div class="overlay">
+    <ion-card class="card">
+      <div class="list-container">
+        <ion-card-header>
+          <div class="container">
+            <h1>Pesanan</h1>
+          </div>
+          <div class="horizontal-line"></div>
+          <div class="search-bar-container">
+            <ion-searchbar
+              [(ngModel)]="searchQuery"
+              (ionInput)="filterDataOrder()"
+              placeholder="Cari Nama atau Nota"
+              class="custom-searchbar"
+            ></ion-searchbar>
+            <ion-button
+              class="button-sc"
+              size="large"
+              color="success"
+              [routerLink]="['/pilihpelanggan']"
+              ><ion-icon name="add-outline"></ion-icon
+            ></ion-button>
+          </div>
+          <div class="horizontal-lines"></div>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-segment color="success" [(ngModel)]=" selectTabs">
+            <ion-segment-button value="Antrian">
+              <ion-label>Antrian</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="Siap Ambil">
+              <ion-label>Siap Ambil</ion-label>
+            </ion-segment-button>
+          </ion-segment>
+
+          <div style="margin-top: 0%" class="horizontal-line"></div>
+          <ion-list *ngIf="selectTabs == 'Antrian'">
+            <ion-list
+              *ngIf="DataOrderAntrian && DataOrderAntrian.length > 0"
+              lines="full"
+            >
+              <ion-item
+                class="list-item"
+                [routerLink]="['/rincianpesanan', order.id]"
+                *ngFor="let order of DataOrderAntrian"
+              >
+                <div class="item-content">
+                  <div class="item-header">
+                    <span class="nota">{{order.invoice}}</span>
+                    <span class="type">{{order.duration_name}}</span>
+                  </div>
+                  <div class="item-body">
+                    <ion-thumbnail slot="start">
+                      <img
+                        alt="Customer"
+                        src="../../../assets/image/keranjang.jpg"
+                      />
+                    </ion-thumbnail>
+                    <ion-label class="name-order">
+                      <h3 class="name-order">{{order.customer_name}}</h3>
+                    </ion-label>
+                  </div>
+                </div>
+                <div class="item-footer">
+                  <div>
+                    <ion-badge color="success"
+                      >{{order.order_status}}</ion-badge
+                    >
+                    <div class="price">
+                      <h3>{{order.total_price | currencyRp}}</h3>
+                      <p>{{order.payment_status}} - {{order.payment_type}}</p>
+                    </div>
+                  </div>
+                </div>
+              </ion-item>
+            </ion-list>
+            <div
+              class="notdata"
+              *ngIf="!DataOrderAntrian || DataOrderAntrian.length === 0"
+            >
+              <h1>Belum Ada Data</h1>
+              <p>Saat ini belum ada data yang dapat di tampilkan</p>
+            </div>
+          </ion-list>
+
+          <!-- Tab Siap Ambil -->
+          <ion-list *ngIf="selectTabs == 'Siap Ambil'">
+            <ion-list
+              *ngIf="DataOrderSiapAmbil && DataOrderSiapAmbil.length > 0"
+              lines="full"
+            >
+              <ion-item
+                class="list-item"
+                [routerLink]="['/rincianpesanan', order.id]"
+                *ngFor="let order of DataOrderSiapAmbil"
+              >
+                <div class="item-content">
+                  <div class="item-header">
+                    <span class="nota">{{order.invoice}}</span>
+                    <span class="type">{{order.duration_name}}</span>
+                  </div>
+                  <div class="item-body">
+                    <ion-thumbnail slot="start">
+                      <img
+                        alt="Customer"
+                        src="../../../assets/image/keranjang.jpg"
+                      />
+                    </ion-thumbnail>
+                    <ion-label class="name-order">
+                      <h3 class="name-order">{{order.customer_name}}</h3>
+                    </ion-label>
+                  </div>
+                </div>
+                <div class="item-footer">
+                  <div>
+                    <ion-badge color="success"
+                      >{{order.order_status}}</ion-badge
+                    >
+                    <div class="price">
+                      <h3>{{order.total_price | currencyRp}}</h3>
+                      <p>{{order.payment_status}} - {{order.payment_type}}</p>
+                    </div>
+                  </div>
+                </div>
+              </ion-item>
+            </ion-list>
+            <div
+              class="notdata"
+              *ngIf="!DataOrderSiapAmbil || DataOrderSiapAmbil.length === 0"
+            >
+              <h1>Belum Ada Data</h1>
+              <p>Saat ini belum ada data yang dapat di tampilkan</p>
+            </div>
+          </ion-list>
+        </ion-card-content>
+        <div class="horizontal-linea"></div>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>

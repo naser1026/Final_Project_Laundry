@@ -1,0 +1,59 @@
+<ion-content>
+  <div class="overlay">
+    <ion-card class="card">
+      <div class="list-container">
+        <ion-card-header>
+          <div class="container">
+            <img
+              class="logo"
+              src="../assets/image/laundry.png"
+              alt="Laundry Logo"
+            />
+          </div>
+          <!-- Uncomment if needed -->
+          <!-- <ion-card-title color="success" class="container body">Binatu</ion-card-title> -->
+        </ion-card-header>
+        <ion-card-content>
+          <div style="margin-top: 0%" class="horizontal-line"></div>
+
+          <ion-list>
+            <ion-card class="kotak" color="danger">
+              <ion-item lines="none">
+                <ion-icon
+                  class="alert"
+                  name="information-circle-outline"
+                  slot="start"
+                ></ion-icon>
+                <ion-label>
+                  Dapatkan ID Kasir pada pengaturan kasir di akun manajer anda.
+                </ion-label>
+              </ion-item>
+            </ion-card>
+
+            <!-- <ion-icon style="padding-right: 2%;" name="mail-outline"></ion-icon> -->
+            <div class="container">
+              <ion-icon
+                class="icon"
+                style="margin-right: 2%"
+                name="person-circle-outline"
+              ></ion-icon>
+              <ion-input
+                color="success"
+                label="ID Kasir"
+                label-placement="floating"
+                fill="outline"
+                shape="round"
+                placeholder="XXX-12345"
+                expand="block"
+              ></ion-input>
+              <div class="padding-space"></div>
+            </div>
+            <ion-button [routerLink]="['/tabs']" color="success" expand="block"
+              >Masuk</ion-button
+            >
+          </ion-list>
+        </ion-card-content>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>

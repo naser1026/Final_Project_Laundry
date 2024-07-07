@@ -1,0 +1,222 @@
+// .overlay {
+//   padding: 50;
+//   margin: 16;
+//   background-image: url(../assets/image/bg.jpg);
+//   background-size: cover;
+//   position: absolute;
+//   top: 0;
+//   width: 100%;
+//   height: 100%;
+//   // background-color: #8c4953;
+//   // background-color: rgba(0,0,0,0.5);
+// }
+
+//     .bg-image{
+// // //         // background-color: #f0f0f0; /* Warna latar belakang */
+//         background-image: url('../assets/image/bg.jpg'); /* Gambar latar belakang */
+//         background-repeat: no-repeat; /* Jangan ulangi gambar */
+//         background-position: center; /* Posisi gambar di tengah */
+//         background-size: contain; /* Sesuaikan gambar dengan ukuran layar */
+// //         // height: 100vh; /* Sesuaikan dengan tinggi viewport */
+//     }
+// // .small-button {
+//   width: 600px; /* Sesuaikan lebar tombol */
+//   height: 30px; /* Sesuaikan tinggi tombol */
+// padding: 5px; /* Sesuaikan padding dalam tombol */
+// font-size: 12px; /* Sesuaikan ukuran font dalam tombol */
+// }
+.ion-input {
+  // --border-width: px; /* Menghilangkan border */
+  --highlight-height: 2px; /* Menghilangkan highlight saat input dipilih */
+}
+.custom-input {
+  --border-color: #ccc; /* Warna border */
+  --border-width: 1px; /* Lebar border */
+  --border-radius: 8px; /* Radius border */
+  --padding-start: 16px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  /* align-items: ; */
+  height: auto;
+  margin-top: 10px;
+}
+
+.pading-bottom {
+  padding-bottom: 3%;
+}
+.padding-space {
+  // padding-top: 1%;
+  // padding-bottom: 1%;
+  margin: 3%;
+}
+
+.element {
+  background-color: rgb(0, 255, 47); /* Hijau */
+  // color: rgb(0, 60, 255); /* Merah */
+}
+
+.font-color {
+  color: lightgray; /* Mengubah warna font menjadi merah */
+}
+
+// .horizontal-line {
+//   border-top: 2px solid #a2ada1; /* Ubah warna dan ketebalan sesuai kebutuhan */
+//   margin: 20px 0; /* Margin atas dan bawah */
+//   // margin-bottom: 3px;
+// }
+
+.text-center-line {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.text-center-line::before,
+.text-center-line::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #b5a8a8;
+  // border-bottom: 1px solid #b5a8a8;
+}
+
+.text-center-line:not(:empty)::before {
+  margin-right: 0.25em;
+}
+
+.text-center-line:not(:empty)::after {
+  margin-left: 0.25em;
+}
+
+.body {
+  font-family: "bubblegun", sans-serif;
+}
+.logo {
+  height: 150px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+//*=== di dalam Card *==
+
+//   .card {
+//     border: 1px solid #ddd;
+//     border-radius: 8px;
+//     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+//     padding: 20px;
+//     max-width: 300px;
+//     margin: 20px auto;
+//     font-family: 'Arial', sans-serif; /* Mengatur font default untuk card */
+// }
+
+// /* Gaya untuk judul card */
+// .card-title {
+//     font-size: 1.5em;
+//     font-weight: bold;
+//     margin-bottom: 10px;
+//     font-family: 'Georgia', serif; /* Mengatur font khusus untuk judul */
+// }
+
+// /* Gaya untuk isi card */
+// .card-content {
+//     font-size: 1em;
+//     color: #555;
+//     font-family: 'Verdana', sans-serif; /* Mengatur font khusus untuk isi */
+// }
+
+// /* Gaya untuk tombol di dalam card */
+// // .card-button {
+//     // display: inline-block;
+//     // padding: 10px 15px;
+//     // background-color: #007bff;
+//     // color: #fff;
+//     // text-decoration: none;
+//     // border-radius: 5px;
+//     // margin-top: 15px;
+//     font-family:'poppins';/* Mengatur font khusus untuk tombol */
+// // }
+
+// .card-button:hover {
+//     background-color: #0056b3;
+// }
+
+// .card-sign-in ion-card {
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+//   justify-content: space-between;
+//   padding: 10px;
+//   border: 1px solid #ccc;
+//   border-radius: 8px;
+//   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+// }
+
+// .custom-card {
+
+//   width: 85%; /* Lebar card menjadi 90% dari kontainer */
+//   height: 700px; /* Tinggi card tetap */
+//   margin-top: 50px; /* Card ditengah-tengah secara horizontal */
+//   // margin-left: 10; /* Card ditengah-tengah secara horizontal */
+// }
+
+.card {
+  // background: white; /* Warna latar belakang card */
+  // padding: 20px; /* Jarak dalam card */
+  margin-top: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+  border-top-left-radius: 50px; /* Sudut membulat */
+  border-top-right-radius: 50px; /* Sudut membulat */
+  max-width: max; /* Lebar maksimum card */
+  // width: 100%; /* Lebar penuh card dalam batas max-width */
+  // max-height: 900px;
+  height: 100%;
+  overflow: clip;
+  // text-align: center; /* Teks di tengah */
+}
+
+ion-segment-button {
+  font-size: 14px;
+  font-weight: 550;
+}
+
+ion-button {
+  font-size: 14px;
+  font-weight: 550;
+  margin-top: 10px;
+}
+
+.alert {
+  margin-right: 5px;
+}
+
+p {
+  cursor: pointer;
+}
+
+.ikon {
+  margin-right: 20px;
+}
+
+.list-container {
+  height: calc(100vh - 50px); /* Adjust as needed */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+ion-list {
+  height: 100%; /* Make the list fill the card content */
+  overflow: auto; /* Make the list scrollable */
+}
+
+ion-card .kotak {
+  margin-top: -2px;
+  margin-bottom: 20px;
+}
+ion-item {
+  --background: #f96e63;
+}
+ion-button {
+  margin-top: 20px;
+}

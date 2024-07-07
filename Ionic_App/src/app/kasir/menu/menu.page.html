@@ -1,0 +1,113 @@
+<ion-content [fullscreen]="true">
+  <div class="overlay">
+    <ion-card class="card2">
+      <div class="main">
+        <div class="main-card">
+          <div class="card-on">
+            <p>
+              Trisna Wiharja
+              <ion-icon name="ellipse-sharp" color="success"></ion-icon>
+            </p>
+          </div>
+          <div class="inner-card store-info">
+            <img src="../../../assets/image/icon-shop.png" />
+            <div class="store-details">
+              <h1>Kiwi Fresh Laundry</h1>
+              <p>Jl Merah, Kertos</p>
+              <p>+6285774418236</p>
+            </div>
+          </div>
+          <div class="cash-info">
+            <div class="inner-card">
+              <p>Rp 0</p>
+              <p>Kas Tunai</p>
+            </div>
+            <div class="inner-card">
+              <p>Rp 0</p>
+              <p>Kas Non Tunai</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ion-card>
+    <ion-card class="card1">
+      <ion-card-content>
+        <br />
+        <div class="list-container">
+          <ion-list>
+            <div class="contain">
+              <ion-button
+                class="custom-button"
+                color="success"
+                [routerLink]="['/pilihpelanggan']"
+              >
+                <ion-icon name="add-outline" size="large"></ion-icon>
+              </ion-button>
+              <div class="text-container" [routerLink]="['/pilihpelanggan']">
+                <span class="text1">Tambah Pesanan</span>
+                <span class="text2">Buat Pesanan Baru</span>
+              </div>
+            </div>
+            <br />
+            <div class="contain">
+              <ion-button
+                class="custom-button"
+                [routerLink]="['/tabs/pesanan']"
+                color="success"
+              >
+                <ion-icon name="search-outline"></ion-icon>
+              </ion-button>
+              <div class="text-container" [routerLink]="['/tabs/pesanan']">
+                <span class="text1">Cari Pesanan</span>
+                <span class="text2">Pencarian Pesanan</span>
+              </div>
+            </div>
+            <br />
+            <div class="contain">
+              <ion-button
+                class="custom-button"
+                color="success"
+                [routerLink]="['/searchpelanggan']"
+              >
+                <ion-icon name="people-outline"></ion-icon>
+              </ion-button>
+              <div class="text-container" [routerLink]="['/searchpelanggan']">
+                <span class="text1">Data Pelanggan</span>
+                <span class="text2">Kelola Data Pelanggan</span>
+              </div>
+            </div>
+            <br />
+            <div class="contain">
+              <ion-button
+                class="custom-button"
+                color="success"
+                [routerLink]="['/tabs-login']"
+              >
+                <ion-icon name="people-outline"></ion-icon>
+              </ion-button>
+              <div class="text-container" [routerLink]="['/tabs-login']">
+                <span class="text1">Pengurangan Kas</span>
+                <span class="text2">Pencatatan Pengeluaran Laundry</span>
+              </div>
+            </div>
+            <br />
+            <div class="contain">
+              <ion-button
+                class="custom-button"
+                color="success"
+                [routerLink]="['/login']"
+              >
+                <ion-icon name="power-outline"></ion-icon>
+              </ion-button>
+              <div class="text-container" [routerLink]="['/login']">
+                <span class="text1">Keluar Akun</span>
+                <span class="text2">Keluar Dari Akun Kasir</span>
+              </div>
+            </div>
+            <br />
+          </ion-list>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

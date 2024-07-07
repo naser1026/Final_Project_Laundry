@@ -1,0 +1,78 @@
+<ion-content [fullscreen]="true">
+  <div class="overlay">
+    <ion-card class="card">
+      <div>
+        <ion-card-header>
+          <ion-toolbar>
+            <div class="toolbar-content">
+              <ion-icon
+                [routerLink]="['/tabs/menu']"
+                class="ikon"
+                name="arrow-back-outline"
+                size="large"
+              ></ion-icon>
+              <h1 class="toolbar-title">PELANGGAN</h1>
+              <div class="spacer"></div>
+            </div>
+          </ion-toolbar>
+          <div class="horizontal-line"></div>
+          <div class="search-bar-container">
+            <ion-searchbar
+              [(ngModel)]="searchQuery"
+              (ngModelChange)="filterCustomers()"
+              placeholder="Cari Nama"
+              class="custom-searchbar"
+            ></ion-searchbar>
+            <ion-button
+              class="button-sc"
+              size="large"
+              color="success"
+              [routerLink]="['/addpelanggan']"
+              ><ion-icon name="add-outline"></ion-icon
+            ></ion-button>
+          </div>
+          <div class="horizontal-lines"></div>
+        </ion-card-header>
+        <div class="list-container">
+          <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+            <ion-refresher-content
+              pullingText="Pull to refresh"
+              refreshingSpinner="circles"
+            >
+            </ion-refresher-content>
+          </ion-refresher>
+          <ion-list lines="full">
+            <ion-item *ngFor="let customer of filteredDataCustomer">
+              <ion-thumbnail slot="start">
+                <img
+                  alt="Silhouette of mountains"
+                  src="../../../assets/image/person.jpg"
+                />
+              </ion-thumbnail>
+              <ion-label>
+                <h3>{{ customer.name }}</h3>
+                <p>No Handphone</p>
+                <h2>{{ customer.phone_number }}</h2>
+              </ion-label>
+
+              <ion-button
+                color="success"
+                size="large"
+                (click)="editCustomer(customer)"
+              >
+                <ion-icon name="pencil-outline"></ion-icon>
+              </ion-button>
+              <ion-button
+                (click)="doPostDeleteCustomer(customer.id)"
+                color="medium"
+                size="large"
+              >
+                <ion-icon name="trash-outline"></ion-icon>
+              </ion-button>
+            </ion-item>
+          </ion-list>
+        </div>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>

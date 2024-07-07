@@ -1,0 +1,108 @@
+<ion-content [fullscreen]="true">
+  <div class="overlay">
+    <ion-card class="card">
+      <div>
+        <ion-card-header>
+          <ion-toolbar>
+            <div class="toolbar-content">
+              <ion-icon
+                [routerLink]="['/tabs/pesanan']"
+                class="ikon"
+                name="arrow-back-outline"
+                size="large"
+              ></ion-icon>
+              <h1 class="toolbar-title">PILIH PELANGGAN</h1>
+              <div class="spacer"></div>
+            </div>
+          </ion-toolbar>
+          <div class="horizontal-line"></div>
+          <div class="search-bar-container">
+            <ion-searchbar
+              [(ngModel)]="searchQuery"
+              (ngModelChange)="filterCustomers()"
+              placeholder="Cari Nama"
+              class="custom-searchbar"
+            ></ion-searchbar>
+            <ion-button
+              class="button-sc"
+              size="large"
+              color="success"
+              [routerLink]="['/addpelanggan']"
+              ><ion-icon name="add-outline"></ion-icon
+            ></ion-button>
+          </div>
+          <div class="horizontal-lines"></div>
+        </ion-card-header>
+        <div class="list-container">
+          <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+            <ion-refresher-content
+              pullingText="Pull to refresh"
+              refreshingSpinner="circles"
+            >
+            </ion-refresher-content>
+          </ion-refresher>
+          <ion-list lines="full">
+            <ion-item *ngFor="let customer of filteredDataCustomer">
+              <ion-thumbnail slot="start">
+                <img
+                  alt="Silhouette of mountains"
+                  src="../../../assets/image/person.jpg"
+                />
+              </ion-thumbnail>
+              <ion-label>
+                <h3>{{ customer.name }}</h3>
+                <p>No Handphone</p>
+                <h2>{{ customer.phone_number }}</h2>
+              </ion-label>
+
+              <ion-button
+                (click)="openModal(customer)"
+                color="success"
+                size="large"
+              >
+                Pilih
+              </ion-button>
+            </ion-item>
+          </ion-list>
+        </div>
+      </div>
+      <ion-modal
+        [isOpen]="isModalOpen"
+        (willDismiss)="onWillDismiss($event)"
+        [initialBreakpoint]="1"
+        [breakpoints]="[0, 2, 1, 1]"
+        handleBehavior="cycle"
+      >
+        <ng-container *ngIf="isModalOpen">
+          <ion-content>
+            <div class="modal-container">
+              <div class="modal-header">
+                <h2>Pilih Durasi</h2>
+              </div>
+              <div class="modal-content">
+                <ion-item
+                  *ngFor="let durasi of DataDurasi"
+                  lines="none"
+                  class="duration-item"
+                >
+                  <div class="duration-text">
+                    <div class="duration-name">{{ durasi.name }}</div>
+                    <div class="duration-value">{{ durasi.value }} Jam</div>
+                  </div>
+                  <ion-button
+                    fill="solid"
+                    color="success"
+                    class="select-button"
+                    (click)="selectDuration(durasi)"
+                  >
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                  </ion-button>
+                </ion-item>
+              </div>
+            </div>
+          </ion-content>
+        </ng-container>
+      </ion-modal>
+    </ion-card>
+  </div>
+</ion-content>

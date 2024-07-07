@@ -1,0 +1,125 @@
+<ion-content [fullscreen]="true">
+  <div class="overlay">
+    <ion-card class="card">
+      <div class="list-container">
+        <ion-card-header>
+          <ion-toolbar>
+            <div class="toolbar-content">
+              <ion-icon
+                [routerLink]="['/tabs/pesan']"
+                class="ikon"
+                name="arrow-back-outline"
+                size="large"
+              ></ion-icon>
+              <h1 class="toolbar-title">RINCIAN PESANAN</h1>
+              <div class="spacer"></div>
+            </div>
+          </ion-toolbar>
+          <div class="horizontal-lines"></div>
+        </ion-card-header>
+
+        <ion-card-content *ngIf="orderDetails">
+          <h3>{{ orderDetails.invoice }}</h3>
+          <div class="container1">
+            <img
+              class="small-left-img"
+              src="../../../assets/image/person.jpg"
+              alt="Person Image"
+            />
+            <div class="text">
+              <h2>{{ orderDetails.customer.name }}</h2>
+              <h4 class="p2">No. Handphone</h4>
+              <h4 class="p3">{{ orderDetails.customer.phone_number }}</h4>
+            </div>
+            <div
+              class="whatsapp-icon"
+              (click)="openWhatsApp(orderDetails.customer.phone_number)"
+            >
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </div>
+          </div>
+
+          <ion-card
+            class="in-card"
+            *ngFor="let package of orderDetails.packages"
+          >
+            <ion-card-content>
+              <div class="card-content">
+                <div class="left-section">
+                  <p class="small-text">
+                    {{ package.duration.name }} - {{ package.package_type }}
+                  </p>
+                  <p class="bold-text">{{ package.name }}</p>
+                  <p class="small-text2">{{ package.price | currencyRp}}</p>
+                </div>
+                <div class="right-section">
+                  <p class="bold-text quantity">
+                    {{ package.count }}
+                    <span class="small-text"> {{ package.package_type }} </span>
+                  </p>
+                  <p class="small-text3">{{ package.price | currencyRp }}</p>
+                </div>
+              </div>
+            </ion-card-content>
+          </ion-card>
+
+          <ion-card class="custom-card3">
+            <ion-card-content>
+              <div class="info-row">
+                <div class="label">Dibuat Oleh</div>
+                <div class="value">Banaspati</div>
+              </div>
+              <div class="info-row">
+                <div class="label">Status</div>
+                <div class="value">{{ orderDetails.order_status }}</div>
+              </div>
+              <div class="info-row">
+                <div class="label">Catatan</div>
+                <div class="value">{{ orderDetails.information }}</div>
+              </div>
+              <div class="info-row">
+                <div class="label">Parfum</div>
+                <div class="value">{{ orderDetails.parfum }}</div>
+              </div>
+              <div class="info-row">
+                <div class="label">Status Pembayaran</div>
+                <div class="value">{{ orderDetails.payment_status }}</div>
+              </div>
+              <div class="info-row2">
+                <div class="label">Total Layanan</div>
+                <div class="value">
+                  {{ orderDetails.total_service | currencyRp }}
+                </div>
+              </div>
+              <div class="info-row">
+                <div class="label">Diskon</div>
+                <div class="value">- Rp {{ orderDetails.discount }}</div>
+              </div>
+              <div class="info-row">
+                <div class="label">Total</div>
+                <div class="value">
+                  {{ orderDetails. total_price | currencyRp }}
+                </div>
+              </div>
+            </ion-card-content>
+          </ion-card>
+
+          <ion-button class="button-pesanan" expand="block">
+            Pesanan Telah Siap
+          </ion-button>
+          <ion-button
+            class="button-ubah"
+            expand="block"
+            (click)="presentPaymentTypeAlert()"
+          >
+            Ubah Status Pembayaran
+          </ion-button>
+
+          <ion-button class="button-batal" expand="block">
+            Batalkan Pesanan
+          </ion-button>
+        </ion-card-content>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>
